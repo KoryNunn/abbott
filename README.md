@@ -19,3 +19,15 @@ normalAsyncFunction(function(error, data){
 });
 
 ```
+
+You can also pass a function that returns a promise, and it will give you a nice CPS version:
+
+
+```javascript
+// instead of
+somethingThatReturnsAPromise('foo', 'bar').then(successCallback, errorCallback);
+
+// you can do
+abbott(somethingThatReturnsAPromise, 'foo', 'bar', callback);
+
+```
