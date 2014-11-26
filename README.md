@@ -5,6 +5,7 @@ Abbott breaks promises. Turns them back into CPS style
 ## Usage
 
 ```javascript
+var abbott = require('abbott');
 
 // make a promise
 var promise = something();
