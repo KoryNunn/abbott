@@ -1,0 +1,15 @@
+{
+  "name": "abbott",
+  "version": "1.0.0",
+  "description": "Abbott breaks promises. Turns them back into CPS style",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Kory Nunn <knunn187@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "q": "^1.1.2",
+    "tape": "^3.0.3"
+  }
+}
