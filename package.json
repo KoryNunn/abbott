@@ -1,6 +1,6 @@
 {
   "name": "abbott",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Abbott breaks promises. Turns them back into CPS style",
   "main": "index.js",
   "scripts": {
