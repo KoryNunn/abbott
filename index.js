@@ -4,16 +4,19 @@ function checkIfPromise(promise){
     }
 }
 
-module.exports = function abbott(promise){
-    if(typeof promise !== 'function'){
-        checkIfPromise(promise);
+module.exports = function abbott(promiseOrFn){
+    if(typeof promiseOrFn !== 'function'){
+        checkIfPromise(promiseOrFn);
     }
 
     return function(){
-        if(typeof promise === 'function'){
-           promise = promise.apply(null, Array.prototype.slice.call(arguments, 0, -1));
+        var promise;
+        if(typeof promiseOrFn === 'function'){
+           promise = promiseOrFn.apply(null, Array.prototype.slice.call(arguments, 0, -1));
+        }else{
+            promise = promiseOrFn;
         }
-        
+
         checkIfPromise(promise);
 
         var callback = arguments[arguments.length-1];
